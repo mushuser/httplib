@@ -9,7 +9,7 @@ function httpretry(url, options, ifNthrow) {
         var response = UrlFetchApp.fetch(url, options)
       }
       var code = response.getResponseCode()
-      if( code == 200 ) {
+      if( code < 300 ) {  // for 200, 201 compatible
         return response
       }
     } catch(e) {
