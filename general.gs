@@ -32,12 +32,16 @@ function throw_print(usermsg) {
 
 
 function printc() {
-  var template = arguments[0]
-  var args = []
-  for(var i=1; i<arguments.length; i++) {
-    args.push(arguments[i])
+  if(arguments.length == 1) {
+    var msg = arguments[0]
+  } else {
+    var template = arguments[0]
+    var args = []
+    for(var i=1; i<arguments.length; i++) {
+      args.push(arguments[i])
+    }
+    var msg = Utilities.formatString(template, args)
   }
-  var msg = Utilities.formatString(template, args)
   
   console.log(msg)
   return msg
@@ -45,12 +49,16 @@ function printc() {
 
 
 function printl() {
-  var template = arguments[0]
-  var args = []
-  for(var i=1; i<arguments.length; i++) {
-    args.push(arguments[i])
+  if(arguments.length == 1) {
+    var msg = arguments[0]
+  } else {
+    var template = arguments[0]
+    var args = []
+    for(var i=1; i<arguments.length; i++) {
+      args.push(arguments[i])
+    }
+    var msg = Utilities.formatString(template, args)
   }
-  var msg = Utilities.formatString(template, args)
   
   Logger.log(msg)
   return msg
