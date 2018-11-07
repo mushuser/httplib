@@ -29,3 +29,29 @@ function throw_print(usermsg) {
   var msg = caller+":"+usermsg
   throw msg
 }
+
+
+function printc() {
+  var template = arguments[0]
+  var args = []
+  for(var i=1; i<arguments.length; i++) {
+    args.push(arguments[i])
+  }
+  var msg = Utilities.formatString(template, args)
+  
+  console.log(msg)
+  return msg
+}
+
+
+function printl() {
+  var template = arguments[0]
+  var args = []
+  for(var i=1; i<arguments.length; i++) {
+    args.push(arguments[i])
+  }
+  var msg = Utilities.formatString(template, args)
+  
+  Logger.log(msg)
+  return msg
+}
