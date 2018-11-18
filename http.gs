@@ -17,7 +17,7 @@ function httpretry(url, options, ifNthrow) {
       Utilities.sleep(1000 * 1)
       if( i >= httpretries ) {
         if(ifNthrow == true) {
-          console.log(e)
+          console.log("ifNthrow: %s", e)
           return undefined
         } else {
           throw_print(e)
