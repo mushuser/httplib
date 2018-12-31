@@ -1,4 +1,4 @@
-var httpretries = 3 
+var httpretries = 5
 
 
 function httpretry(url, options, ifNthrow) {
